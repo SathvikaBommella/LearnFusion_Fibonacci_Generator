@@ -1,0 +1,12 @@
+#define the function first before the logic.
+def fibonacci_generator():
+#defining the variables.
+    a, b = 0, 1
+#using the while condition.
+    while True:
+        yield a
+        a, b = b, a + b #logic behind the fibonacci.
+
+g = fibonacci_generator()
+fib_seq = [next(g) for _ in range(10)] # vary the range value to get more no.of series.
+print(fib_seq)
